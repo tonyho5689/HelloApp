@@ -1,3 +1,4 @@
+from streamlit as st
 from transformers import pipeline
 from PIL import Image
 
@@ -21,4 +22,5 @@ age_predictions = sorted(age_predictions, key=lambda x: x['score'], reverse=True
 print("Predicted Age Range:")
 print(f"Age range: {age_predictions[0]['label']}")
 
+st.write("Done")
 
